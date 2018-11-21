@@ -2,11 +2,26 @@
 	<html lang="pt-br">
 		<head>
 			<meta charset="utf-8"/>
-			<title>Notícias</title>
+			<title>Notï¿½cias</title>
 		</head>
 	<body>
 
-		<h1>Notícias</h1>
+		<table>
+	      <thead>
+			<tr><td>titulo</td></tr>
+			<tr><td>noticia</td></tr>
+			<tr><td>data_criacao</td></tr>	
+		  </thead>
+		  <tbody>
+			    <%  for(let lista in noticias){ %>
+					<tr>
+						<td><%= noticias[lista].titulo %></td>
+						<td><%= noticias[lista].noticia %></td>
+						<td><%= noticias[lista].data_criacao %></td>
+					</tr>
+				<% } %>
+		  </tbody>
+		</table>
 
 	</body>
 </html>
